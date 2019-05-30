@@ -1,6 +1,6 @@
 # Prometheus 101
 
-![](http://media.giphy.com/media/Hxc5Tc4NTivw4/giphy.gif)
+![](matrix-red-pill.gif )
 
 
 
