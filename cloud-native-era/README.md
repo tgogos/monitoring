@@ -23,7 +23,7 @@ While reading, try to consider:
 
 
 
-![A quick overview…](https://paper-attachments.dropbox.com/s_1E611437D0329ADE41805C7EFCB29C0B037E418309021C6DBC2F23478C6155C6_1559129084608_2019-05-29_14-24-20.gif)
+![A quick overview…](image_preview.gif)
 
 
 
