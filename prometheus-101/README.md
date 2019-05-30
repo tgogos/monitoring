@@ -101,14 +101,14 @@ I start with `node_network_receive_bytes_total{device="eno1"}` where `{device=``
 
 click to zoom **🔎**
 
-![](https://paper-attachments.dropbox.com/s_64BB5D88B55C22AC2F7CBF59F6712C8B435D5EBFCF6CE2DF33CFD6EC2EE27655_1558686923654_2019-05-24_11-33-17.gif)
+![](counter_&_irate().gif)
 
 
 The basic idea:
 
 - a counter is a metric that keeps increasing
 - rate() calculates a per-second rate for a counter metric
-![](https://paper-attachments.dropbox.com/s_64BB5D88B55C22AC2F7CBF59F6712C8B435D5EBFCF6CE2DF33CFD6EC2EE27655_1558688644163_Untitled-1.png)
+![](counters_rate()_explained.png)
 
 
 
@@ -127,7 +127,7 @@ source: https://www.robustperception.io/irate-graphs-are-better-graphs
 
 
 ## irate graphs are better graphs
-![“irate graphs are better graphs”](https://paper-attachments.dropbox.com/s_64BB5D88B55C22AC2F7CBF59F6712C8B435D5EBFCF6CE2DF33CFD6EC2EE27655_1558689913192_Screenshot-171015-091340.png)
+![“irate graphs are better graphs”](rate_vs_irate.png)
 
 
 The `rate` function takes a time series over a time range, and based on the first and last data points within that range (allowing for counter resets) calculates a per-second rate. As it's based on the whole range, it's effectively an average rate over that range - 5 minutes in this case. You can see that the green line in the graph above is slow to pick up on changes, and not showing the full detail.
@@ -142,7 +142,7 @@ Notice the wrong per-second rate calculated in the `rate()` case (it shows bytes
 
 click to zoom **🔎**
 
-![](https://paper-attachments.dropbox.com/s_64BB5D88B55C22AC2F7CBF59F6712C8B435D5EBFCF6CE2DF33CFD6EC2EE27655_1558690266908_2019-05-24_12-14-21.gif)
+![](rate_resolution_problem.gif)
 
 
 
@@ -192,7 +192,7 @@ The node has been up for about 4 days, that’s why the time counters (on the le
 
 - left picture   :  `node_cpu_seconds_total`
 - right picture:  `irate(node_cpu_seconds_total[1m])`
-![](https://paper-attachments.dropbox.com/s_64BB5D88B55C22AC2F7CBF59F6712C8B435D5EBFCF6CE2DF33CFD6EC2EE27655_1558697357826_Capture.JPG)
+![](cpu.jpg)
 
 
 
@@ -206,7 +206,7 @@ To treat the different values coming from the 8 different CPUs as one single val
 
 
 
-![](https://paper-attachments.dropbox.com/s_64BB5D88B55C22AC2F7CBF59F6712C8B435D5EBFCF6CE2DF33CFD6EC2EE27655_1558698411391_Capture.JPG)
+![](cpu_sum().jpg)
 
 
 
@@ -218,7 +218,7 @@ What happens if a machine has 2, 4… etc CPUs? To make the above more dynamic (
 `avg by (mode)(irate(node_cpu_seconds_total[1m]))`
 
 
-![](https://paper-attachments.dropbox.com/s_64BB5D88B55C22AC2F7CBF59F6712C8B435D5EBFCF6CE2DF33CFD6EC2EE27655_1558698900776_Capture2.JPG)
+![](cpu_avg().jpg)
 
 
 
@@ -233,7 +233,7 @@ and at the end we also change the graph settings from seconds to percentage.
 
 click to zoom **🔎**
 
-![](https://paper-attachments.dropbox.com/s_64BB5D88B55C22AC2F7CBF59F6712C8B435D5EBFCF6CE2DF33CFD6EC2EE27655_1558699809636_2019-05-24_15-07-40.gif)
+![](cpu_percentage.gif)
 
 
 
@@ -245,7 +245,7 @@ The same query can be used to show a gauge by changing the graph type and a few 
 Command used to generate CPU spikes: `stress --cpu 8 --timeout 20`
 
 
-![](https://paper-attachments.dropbox.com/s_64BB5D88B55C22AC2F7CBF59F6712C8B435D5EBFCF6CE2DF33CFD6EC2EE27655_1558701865050_2019-05-24_15-17-34.gif)
+![](cpu_instant_gauge.gif)
 
 
 
@@ -256,7 +256,7 @@ In the previous steps we show everything apart from idle (100%-idle) but sometim
 `(avg(irate(node_cpu_seconds_total {mode!="idle"} [1m])) without (cpu))`
 
 
-![](https://paper-attachments.dropbox.com/s_64BB5D88B55C22AC2F7CBF59F6712C8B435D5EBFCF6CE2DF33CFD6EC2EE27655_1558704002281_Capture.JPG)
+![](cpu_details.jpg)
 
 
 
