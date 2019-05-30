@@ -276,6 +276,7 @@ k8s-master: `10.200.16.2` will run:
 - a prometheus server to collect the data
 - a grafana to create dashboards
 
+Docker compose file 👇:
 
     # docker-compose.yml
     
@@ -313,6 +314,8 @@ scrapping:
 - prometheus node at `10.200.16.3:9100/metrics`
 - container metrics at `10.200.16.3:8080`
 
+
+Prometheus yaml file 👇:
 
     # prometheus.yml
     
@@ -355,6 +358,7 @@ k8s-node: `10.200.16.3` will run:
 - a prometheus node-exporter to expose host metrics
 - a cAdvisor to expose container metrics
 
+Commands used to run the containers 👇:
 
     #node_exporter
     
