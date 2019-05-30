@@ -10,7 +10,7 @@
  - [Counters](#Counters) 
  - [Rate()-vs-irate()](#Rate-vs-irate) 
  - [CPU-usage](#CPU-usage) 
- - [Setup-used:-Medianetlab-K8S-cl](#Setup-used:-Medianetlab-K8S-cl) 
+ - [Setup-used:-Medianetlab-K8S-cl](#setup-used-medianetlab-k8s-cluster) 
 
 
 
