@@ -4,7 +4,7 @@ Tags & Buzzwords included in this document:  `LOGS` ,  `METRICS` ,   `TRACES` , 
 
 The scope of this document is to help us understand more about the above [**👆**](https://emojipedia.org/white-up-pointing-backhand-index/) and prevent us from doing **Cargo Cult Engineering**:
 
-![](https://paper-attachments.dropbox.com/s_1E611437D0329ADE41805C7EFCB29C0B037E418309021C6DBC2F23478C6155C6_1559127836789_PiNFw0F.png)
+![](cargo-cult.png)
 
 
 While reading, try to consider:
@@ -36,7 +36,7 @@ Containers, Kubernetes, microservices, service meshes, immutable infrastructure 
 The *nature* *of* *failure* is changing, the way our systems behave (or *misbehave*) as a whole is changing, the requirements these systems need to meet are changing, the guarantees these systems need to provide are changing.
 
 
-![](https://paper-attachments.dropbox.com/s_1E611437D0329ADE41805C7EFCB29C0B037E418309021C6DBC2F23478C6155C6_1559123384107_system.png)
+![](system.png)
 
 
 
@@ -57,7 +57,7 @@ Modern monitoring systems like Prometheus represent every time series using a me
 This allows for a high degree of *dimensionality* in the data model. A metric is identified using both the metric name and the labels. The actual data stored in the time-series is called a *sample* and it consists of two components — a *float64* value and a millisecond precision timestamp.
 
 
-![The anatomy of a Prometheus metric](https://paper-attachments.dropbox.com/s_1E611437D0329ADE41805C7EFCB29C0B037E418309021C6DBC2F23478C6155C6_1559122896390_prometheus_metric.png)
+![The anatomy of a Prometheus metric](prometheus_metric.png)
 
 
 
@@ -72,7 +72,7 @@ Event logs in general come in three forms:
 
 Logs shine when it comes to providing valuable insight along with *ample context* into the long tail that averages and percentiles don’t surface. Coming back to the example we saw above, let us assume that all of these various services also emit logs at varying degrees of granularity. Some services might emit more log information per request than others. Looking at logs alone, our data landscape might look like the following:
 
-![](https://paper-attachments.dropbox.com/s_1E611437D0329ADE41805C7EFCB29C0B037E418309021C6DBC2F23478C6155C6_1559124305714_logs.png)
+![](logs.png)
 
 
 Recording anything and everything that might be of interest to us becomes incredibly useful when we are searching at a very fine level of granularity, but simply looking at this mass of data, it’s impossible to infer at a glance what the request lifecycle was or even which systems the request traversed through or even the overall health of any particular system. Sure, the data might be *rich* but without further processing, it’s pretty *impenetrable*. There is, quite frankly, an *endless* amount of data points we can collect and an *endless* number of questions we can answer, from the most trivial to the most difficult.
@@ -84,7 +84,7 @@ Recording anything and everything that might be of interest to us becomes incred
 A trace is a representation of a series of causally-related distributed events that encode the end-to-end request flow through a distributed system. A single trace can provide visibility into both the *path* traversed by a request as well as the *structure* of a request. The path of a request allows us to understand the services involved in the servicing of a request, and the *structure* of a trace helps one understand the junctures and effects of asynchrony in the execution of a request.
 
 
-![](https://paper-attachments.dropbox.com/s_1E611437D0329ADE41805C7EFCB29C0B037E418309021C6DBC2F23478C6155C6_1559124250115_traces.png)
+![](traces.png)
 
 
 Albeit discussions around tracing pivot around their utility in a microservices environment, I think it’s fair to suggest that any sufficiently complex application that interacts with — or rather, *contends* for — resources such as the network or disk in a non-trivial manner can benefit from the benefits tracing can provide.
