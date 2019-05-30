@@ -6,11 +6,11 @@
 
 ## Doc structure:
 
-[+Prometheus 101: Keep-It-Simple](https://paper.dropbox.com/doc/Prometheus-101-Keep-It-Simple-INz2CVtlXH8J1OVVkEuAB#:uid=107909379871271793544787&amp;h2=Keep-It-Simple)
-[+Prometheus 101: Counters](https://paper.dropbox.com/doc/Prometheus-101-Counters-INz2CVtlXH8J1OVVkEuAB#:uid=841340972446649242639647&amp;h2=Counters) 
-[+Prometheus 101: Rate()-vs-irate()](https://paper.dropbox.com/doc/Prometheus-101-Rate-vs-irate-INz2CVtlXH8J1OVVkEuAB#:uid=243787174636343253458623&amp;h2=Rate()-vs-irate()) 
- [+Prometheus 101: CPU-usage](https://paper.dropbox.com/doc/Prometheus-101-CPU-usage-INz2CVtlXH8J1OVVkEuAB#:uid=732455995455340052241511&amp;h2=CPU-usage) 
-[+Prometheus 101: Setup-used:-Medianetlab-K8S-cl](https://paper.dropbox.com/doc/Prometheus-101-Setup-used-Medianetlab-K8S-cl-INz2CVtlXH8J1OVVkEuAB#:uid=775870078057215442130085&amp;h2=Setup-used:-Medianetlab-K8S-cl) 
+[Keep-It-Simple](#Keep-It-Simple)
+[Counters](#Counters) 
+[Rate()-vs-irate()](#Rate-vs-irate) 
+[CPU-usage](#CPU-usage) 
+[Setup-used:-Medianetlab-K8S-cl](#Setup-used:-Medianetlab-K8S-cl) 
 
 
 
