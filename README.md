@@ -1,5 +1,5 @@
 # monitoring
 monitoring, observability, logs, metrics, traces
 
-- [](/cloud-native-era)
-- [](/prometheus-101)
+- [Cloud-Native Era](/cloud-native-era)
+- [Prometheus 101](/prometheus-101)
