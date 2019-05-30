@@ -8,10 +8,10 @@ The scope of this document is to help us understand more about the above [**👆
 
 
 While reading, try to consider:
-— the **strengths** and **weaknesses** of each category of tools 
-— the **problems** they solve
-— the **tradeoffs** they make
-— their **ease of adoption**/integration into an existing infrastructure
+ - — the **strengths** and **weaknesses** of each category of tools 
+ - — the **problems** they solve
+ - — the **tradeoffs** they make
+ - — their **ease of adoption**/integration into an existing infrastructure
 
 
 ## Doc structure
