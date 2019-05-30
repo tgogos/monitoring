@@ -6,11 +6,11 @@
 
 ## Doc structure:
 
-[Keep-It-Simple](#Keep-It-Simple)
-[Counters](#Counters) 
-[Rate()-vs-irate()](#Rate-vs-irate) 
-[CPU-usage](#CPU-usage) 
-[Setup-used:-Medianetlab-K8S-cl](#Setup-used:-Medianetlab-K8S-cl) 
+ - [Keep-It-Simple](#Keep-It-Simple)
+ - [Counters](#Counters) 
+ - [Rate()-vs-irate()](#Rate-vs-irate) 
+ - [CPU-usage](#CPU-usage) 
+ - [Setup-used:-Medianetlab-K8S-cl](#Setup-used:-Medianetlab-K8S-cl) 
 
 
 
