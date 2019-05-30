@@ -15,10 +15,10 @@ While reading, try to consider:
 
 
 ## Doc structure
-- [The  problem](https://paper.dropbox.com/doc/Monitoring-in-the-time-of-Cloud-Native--AeDxr2MEqbVHcgQwCabpWowTAg-O06bGQHG9kyXvvZtoLFFZ#:uid=262679896511911311533669&h2=The-problem%E2%80%A6)
-- [Basics: metrics, logs, traces](https://paper.dropbox.com/doc/Monitoring-in-the-time-of-Cloud-Native--AeDxr2MEqbVHcgQwCabpWowTAg-O06bGQHG9kyXvvZtoLFFZ#:uid=124809189654263080686925&h2=Basics:-metrics%2C-logs%2C-traces)
-- [Things to consider](https://paper.dropbox.com/doc/Monitoring-in-the-time-of-Cloud-Native--AeDxr2MEqbVHcgQwCabpWowTAg-O06bGQHG9kyXvvZtoLFFZ#:uid=117266842196421618091969&h2=Things-to-consider)
-- [RANDOM things to be aware of](https://paper.dropbox.com/doc/Monitoring-in-the-time-of-Cloud-Native--AeDxr2MEqbVHcgQwCabpWowTAg-O06bGQHG9kyXvvZtoLFFZ#:uid=973051127132419617423874&h2=RANDOM-things-to-be-aware-of)
+- [The  problem](#the-problem)
+- [Basics: metrics, logs, traces](#basics-metrics-logs-traces)
+- [Things to consider](#Things-to-consider)
+- [RANDOM things to be aware of](#RANDOM-things-to-be-aware-of)
 
 
 
