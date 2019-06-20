@@ -20,7 +20,7 @@
 Syslog is the standard solution for logging on UNIX.  The *syslog* facility provides a single, centralized logging facility that can be used to log messages by all applications on the system. 
 
 
-![]()
+![](syslog_architecture.png )
 
 
 The syslog facility has two principal components:
@@ -50,7 +50,7 @@ Each message processed by syslogd has a number of attributes, including
 
 For example, `level` & `facility` values from 2 machines (medianetlab *k8s-master* / *k8s-node*) for the “last 2 days” presented in a Graylog dashboard.
 
-![]()
+![](graylog_example.png )
 
 
 The syslogd daemon examines the facility and level of each message, and then passes it along to any of several possible destinations according to the dictates of an associated configuration file,
@@ -184,7 +184,7 @@ After you press the search button, a **histogram** is generated where you can se
 
 click to zoom **🔎**
 
-![]()
+![](graylog_search.gif 	)
 
 
 
@@ -198,7 +198,7 @@ click to zoom **🔎**
 
 click to zoom **🔎**
 
-![]()
+![](graylog_visualization_types.gif)
 
 
 
@@ -225,7 +225,7 @@ If you have set up your host to send the logs to Graylog, you can see them by ap
 
 click to zoom **🔎**
 
-![]()
+![](graylog_line_graph.gif)
 
 
 To generate the line graph we will have to modify our query in a way that only the uptime values of **ONE** source are being retrieved, for example  `application_name:uptime && source: k8s-node` 
@@ -233,7 +233,7 @@ Second step: from the “fields” panel, select the load_average
 
 click to zoom **🔎**
 
-![]()
+![](graylog_line_graph_2.gif)
 
 
 
@@ -245,9 +245,9 @@ click to zoom **🔎**
 - minimum time resolution for graphs: 1 minute
 - difficult to manage time in dashboards in a unified way. Every visualization has a “Search relative time” setting and  it’s very easy to end up with graphs that don’t display information for the same time range.
 - there is no way to control the colors used and there are also inconsistencies between graphs (same value has different colors in different graphs of the same dashboard), for example:
-![]()
+![](graylog_color_problem.png)
 
 - you can’t combine metrics from different sources to the same graph with different colors. You have to use separate queries / graphs, for example:  `application_name:uptime AND source:k8s-master`  /  `application_name:uptime AND source:k8s-node` 
-![]()
+![](graylog_mutliple_graphs_problem.png)
 
 
